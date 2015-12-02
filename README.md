@@ -26,6 +26,12 @@ I will be working on an internally facing Wiki Application for "company unknown"
 * ActiveRecord/SQL
 
 ###**Front-end Wireframes**###
+![Login](http://img_1.png)
+![Homepage](http://img_2.png)
+![Profile](http://img_3.png)
+![Article](http://img_4.png)
+![User](http://img_5.png)
+![Categories](http://img_6.png)
 
 
 ###**ERD**###
