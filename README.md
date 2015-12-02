@@ -1,24 +1,22 @@
 # project_two
 
-#**PROJECT TWO - WIKI**#
+###**User Stories**###
 
-##**USER STORIES**##
+###**Link to Working Application**###
 
-##**LINK TO WORKING APPLICATION**##
-
-##**LIST OF TECHNOLOGIES USED**##
+###**List of Technologies Used**###
 * HTML
 * CSS
 * Javascipt
 * Ruby/Sinatra
 * ActiveRecord/SQL
 
-##**USER STORIES**## 
+###**User Stories**###
 
-##**FRONT-END WIREFRAMES**## 
+###**Front-end Wireframes**###
 
 
-##**ERD**##
+###**ERD**###
 ![ERD](http://i.imgur.com/QXkW9nY.jpg?1)
 
 
