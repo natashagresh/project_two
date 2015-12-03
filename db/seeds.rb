@@ -1,51 +1,43 @@
-require_relative "config"
+# Requiring the ruby file we used to set up
+# and configure the connection we made to 
+# our sqlite3 database
 
-users = [
-{username:'natashag', password: 'password1'},
-{username:'kimhart', password:'password2'},
-{username:'meredithms', password:'password3'}
-]
+require_relative "db_config.rb"
+CategoriesPost.delete_all
+Category.delete_all
+Post.delete_all
+PostsUser.delete_all
+User.delete_all
 
-User.create(users)
+# Using our models to seed our database!
+# We're just creating new rows in our DB
+# using dummy data.
 
-posts = [
-{created_at: Time.new(), updated_at: Time.new(), article: "saysomething about an artist",
-title_of_article: "title of artist", image_url: "artist.img", author_id: 1, category_id: 1},
-{created_at: Time.new(), updated_at: Time.new(), article: "saysomething about an art movement",
-title_of_article: "title of art movement", image_url: "movement.img", author_id: 2, category_id: 2}
-]
+# We pass in a hash of information where
+# the keys are the column names in our table,
+# and the values are whatever made up info
+# we want to add in.
 
-Post.create(posts)
-
-categories = [
-{category_name: "artists"},
-{category_name:"galleries"},
-{category_name: "movements"},
-{category_name:"exhibitions"}
-]
-
-Category.new(categories)
-
-require_relative "config"
-
-users = [
-  {name: "Philco", age: 99, location: "NYC", avatar_img_url: "/img/philco.jpeg"},
-  {name: "AscotBoi", age: 18, location: "NYC", avatar_img_url: "/img/ascotboi.jpeg"},
-  {name: "Bananar", age: 55, location: "NYC", avatar_img_url: "/img/bananar.jpeg"},
-  {name: "SmileyC", age: 21, location: "NYC", avatar_img_url: "http://factmag-images.s3.amazonaws.com/wp-content/uploads/2015/07/terry-richardson-miley-cyrus-02-635x372-616x372-616x372.jpg"},
-  {name: "NeverOuttaStyle", age: 22, location: "NYC", avatar_img_url: "http://static3.businessinsider.com/image/54b94d266da811fd05c887c8/john-boehner-trolls-obama-with-a-bunch-of-taylor-swift-gifs.jpg"},
-  {name: "BeliebIt", age: 21, location: "NYC", avatar_img_url: "http://blogimg.ngfiles.com/510000/510105/158019994_YouTube_Justin_Bieber_Cele.jpg"},
-  {name: "Deebles", age: 28, location: "NYC", avatar_img_url: "/img/centrodl.jpeg"}
-]
-
-User.create(users)
-
-visits = [
-  {visitor_id: 1, visited_id: 2, created_at: DateTime.new(2015,12,01,8,37)},
-  {visitor_id: 1, visited_id: 2, created_at: DateTime.new(2015,12,01,8,50)},
-  {visitor_id: 1, visited_id: 2, created_at: DateTime.new(2015,12,01,9,02)},
-  {visitor_id: 2, visited_id: 1, created_at: DateTime.new(2015,12,01,10,33)},
-  {visitor_id: 3, visited_id: 5, created_at: DateTime.new(2015,12,01,8,32)},
-]
-
-Visit.create(visits)
+CategoriesPost.create({
+  category_id: 1,
+  post_id: 1
+  })
+Category.create({
+  category_name: "cool stuff"
+  })
+Post.create({
+  created_at: DateTime.now,
+  updated_at: DateTime.now,
+  article: "This is an article!!",
+  title_of_article: "Article Title here!",
+  image_url: "http://i.giphy.com/qrlOmXoTgHAd2.gif",
+  author_id: 1,
+  })
+PostsUser.create({
+  user_id: 1,
+  post_id: 1
+  })
+User.create({
+  username: "ilovewaffles22",
+  password: "waffle4"
+  })
