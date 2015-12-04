@@ -1,0 +1,14 @@
+<h1>Categories</h1>
+
+<% @categories.each do |category| %>
+
+<ul>
+<li><a href="/categories/<%=category['id']%>"><%=category["category_name"]%></a></li>
+</ul>
+
+
+
+<%end%>
+
+<p>Go back to <a href="/">Homepage</a></p>
+

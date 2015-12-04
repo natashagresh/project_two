@@ -1,9 +1,18 @@
-<!-- <h1>Upload New Article Here</h1>
+<h1>Upload New Article Here</h1>
 
-<form method="POST" action="/register">
- <input name="name" type="text" placeholder="Author Name"></input>
-<!--   <input name="start_year" type="text" placeholder="Start Year"></input> -->
- <input type="submit" value="Register"></input>
+<form method="POST" action="/new_articles">
+ <input name="title" type="text" placeholder="Title"></input>
+ <textarea name="post" cols="100" rows="20"></textarea>
+  <select type="text" name="category_id">
+            <% @categories.each do |category| %>
+
+              <option value="<%=category.id%>"> <%=category.category_name%> </option>
+
+              <% end %>
+  </select>
+	
+
+ <input name="img" type="img" placeholder="Add Image Here"></input>
+ <input type="submit" value="Sumbit Article"></input>
 </form>
 
-create table posts (id integer primary key, author VARCHAR, time_posted integer, article VARCHAR, title_of_article VARCHAR, image_url VARCHAR, last_upload VARCHAR, category_id integer ); -->

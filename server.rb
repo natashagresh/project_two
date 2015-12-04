@@ -63,15 +63,40 @@ module App
     	erb :view_article
     end	
 
-    get "/articles/new" do
-    	erb :new_articles
-    end 
-
-    post "/articles/new" do
-    	# do new article post here
+    get "/categories" do
+    	@categories = Category.all
+        erb :categories
     end	
 
-    post "/articles" do
+    get "/categories/:id" do
+    	@categories = Category.find(params[:id])
+    	erb :category_id
+    end	
+
+    get "/new_articles" do
+    	@categories = Category.all
+    	erb :new_articles   	
+    end 
+
+    post "/new_articles" do
+    	@article = Post.create({
+    		author: session[:username],
+    		created_at: DateTime.now,
+    		article: params[:post],
+    		title_of_article: params[:title],
+    		image_url: params[:img]
+            })
+    	 category = Category.find(params[:category_id])
+    	post.categories.push(category)
+
+        redirect to "/articles"
     end
+
+    # get "/users" do
+    # 	@users = User.all
+    # 	erb :users
+    # end	
+
+
 end
 end    
