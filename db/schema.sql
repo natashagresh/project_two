@@ -6,11 +6,11 @@ drop table if exists categories_posts;
 
 create table users (
     id integer primary key, 
-    username VARCHAR, 
-    password VARCHAR
+    password_digest VARCHAR,
+    username VARCHAR 
 );
 
--- Got rid of category_id
+
 create table posts (
     id integer primary key, 
     created_at DATETIME, 
@@ -18,7 +18,8 @@ create table posts (
     article VARCHAR, 
     title_of_article VARCHAR, 
     image_url VARCHAR, 
-    author_id integer
+    author_id integer references users(id),
+    category_id integer references categories(id)
 );
 
 create table posts_users (

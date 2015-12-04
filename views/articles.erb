@@ -3,6 +3,7 @@
 <ul>
 <% @articles.each do |article| %>
   <li>
-  <%= article['name']  %></li>
+  <%= article["title_of_article"]  %></li>
+  <a href="/articles/<%=article['id']%>"><img src="<%= article["image_url"]  %>"></li>
 <% end %>
 </ul>
