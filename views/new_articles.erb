@@ -6,7 +6,7 @@
   <select type="text" name="category_id">
             <% @categories.each do |category| %>
 
-              <option value="<%=category.id%>"> <%=category.category_name%> </option>
+              <option name="<%=category.id%>"> <%=category.category_name%> </option>
 
               <% end %>
   </select>

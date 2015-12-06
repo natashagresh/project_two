@@ -60,6 +60,7 @@ module App
 
     get "/articles/:id" do
     	@article = Post.find(params[:id])
+    	@category = Category.find(@article.category_id)
     	erb :view_article
     end	
 
@@ -69,7 +70,8 @@ module App
     end	
 
     get "/categories/:id" do
-    	@categories = Category.find(params[:id])
+    	@category = Category.find(params[:id])
+    	@articles = @category.posts
     	erb :category_id
     end	
 
@@ -84,10 +86,12 @@ module App
     		created_at: DateTime.now,
     		article: params[:post],
     		title_of_article: params[:title],
-    		image_url: params[:img]
-            })
-    	 category = Category.find(params[:category_id])
-    	post.categories.push(category)
+    		image_url: params[:img],
+            category_id: params[:category_id]})
+    	category = Category.find(params[:category_id])
+
+    	@article.categories.push(category)
+    	@article.save
 
         redirect to "/articles"
     end
