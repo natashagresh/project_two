@@ -7,19 +7,19 @@ drop table if exists categories_posts;
 create table users (
     id integer primary key, 
     password_digest VARCHAR,
-    username VARCHAR 
+    username VARCHAR
 );
 
 
 create table posts (
     id integer primary key, 
-    created_at DATETIME, 
-    updated_at DATETIME, 
+    created_at DATETIME,
+    -- updated_at DATETIME, 
     article VARCHAR, 
     title_of_article VARCHAR, 
     image_url VARCHAR, 
-    author_id integer references users(id),
-    category_id integer references categories(id)
+    author_id integer references users(id)
+   
 );
 
 create table posts_users (

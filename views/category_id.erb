@@ -1,0 +1,8 @@
+<h1> <%= @category.category_name %> </h1>
+
+<% @category.posts.each do |post| %>
+	<h2><%= post.title_of_article %> </h2>
+	<p><%= post.article %></p>
+	<%end %> 
+
+	ADD STUFF

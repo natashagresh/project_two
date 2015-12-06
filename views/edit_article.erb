@@ -1,0 +1,19 @@
+<h1>Editing <%= @article["title"] %>:</h1>
+
+<form action="/articles/<%= @article["id"] %>" method="POST">
+
+  <input type="hidden" name="_method" value="patch">
+  <label for="article_title">Article Title:</label>
+  <input type="text" name="title" placeholder="Article Title" value="<%= @article["title_of_article"] %>">
+   <label for="article">Article:</label>
+  <textarea name="content">"<%= @article["article"] %>"</textarea>
+  <label for="image_url">Image URL:</label>
+  <input id="img" type="img" name="img" value="<%= @article["image_url"] %>"></input>
+  <input id="submit" type="submit" name="submit"> 
+ 
+</form>
+
+<form action="/articles/<%= @article["id"] %>">
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete Article</button>
+</form>

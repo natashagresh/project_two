@@ -60,7 +60,7 @@ module App
 
     get "/articles/:id" do
     	@article = Post.find(params[:id])
-    	@category = Category.find(@article.category_id)
+    	@category = Category.find(params[:id])
     	erb :view_article
     end	
 
@@ -96,10 +96,34 @@ module App
         redirect to "/articles"
     end
 
-    # get "/users" do
-    # 	@users = User.all
-    # 	erb :users
-    # end	
+    # View a form to edit an article
+    get "/articles/:id/edit" do
+        id = params[:id]
+        @article = Post.find_by(id: id)
+        erb :edit_article
+    end    
+    
+    # Submit updates to an article
+    patch "articles/:id" do
+        @article = Article.find(params['id'])
+        @article.update({ 
+        	author: session[:username] ,
+        	created_at: DateTime.now, 
+        	article: params["post"],
+        	title_of_article: params["title"],
+        	image_url: params["img"],
+        	category_id: params[:category_id]})
+        redirect to "articles/#{(article.id)}"
+    end    
+
+    # Delete an article
+    delete "/articles/:id" do
+        id = params['id']
+        @article = Article.find_by({id: id})
+        @article.destroy
+        redirect to "/articles"
+    end
+
 
 
 end
