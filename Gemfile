@@ -5,7 +5,6 @@ gem "activerecord"
 gem "sinatra"
 gem "bcrypt"
 gem "redcarpet"
-gem "rails"
 
 group :development do
 	gem "sqlite3"
