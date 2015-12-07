@@ -10,8 +10,10 @@
 <h1>Upload New Article Here</h1>
 
 <form method="POST" action="/new_articles">
+<label for="article_title">Article Title:</label>
  <input name="title" type="text" placeholder="Title"></input>
- <textarea name="post" cols="100" rows="20"></textarea>
+ <label for="post">Article: </label>
+ <textarea name="post" cols="100" rows="20" placeholder="Write Article Here..."></textarea>
   <select type="text" name="category_id">
             <% @categories.each do |category| %>
 

@@ -1,7 +1,8 @@
 <a href="/index">Homepage</a>
-<a href="/new_articles">Create Articles</a>
 <a href="/articles">Articles</a>
- <form action="/sessions" method="POST">
+<a href="/new_articles">Create Articles</a>
+
+  <form action="/sessions" method="POST">
  <input type="hidden" name="_method" value="delete">
     <button>Log Out</button>
  </form>
@@ -12,6 +13,7 @@
 	<h2><%= post.title_of_article %> </h2>
 	<p><%= post.article %></p>
 	<img src="<%=post.image_url %>">
+	<p><%=post.created_at%></p>
 	<%end %> 
 
-	<!-- ADD STUFF -->
+  <!-- how to add name? -->

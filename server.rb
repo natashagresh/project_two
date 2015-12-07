@@ -4,14 +4,12 @@ module App
     set :method_override, true
     enable :sessions
 
-    get "/login" do
-    	erb :login
-    end	
+    $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true)
 
     get "/sign_up" do
     	erb :sign_up
     end	
-    
+
     get "/index" do
         erb :index
     end
