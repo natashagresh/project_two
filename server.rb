@@ -10,14 +10,16 @@ module App
     	erb :sign_up
     end	
 
-    get "/index" do
-        erb :index
+    get "/" do  
+    @user = User.find(session[:user_id]) if session[:user_id] 
+      redirect to "/login" if !@user 
+      erb :index      
     end
 
-    get "/" do	
-      erb :login      
+    get "/login" do
+        erb :login
     end
-    
+   
     post "/sessions" do
     	redirect to '/'
     end
@@ -45,7 +47,7 @@ module App
       if user
       #  Save their ID into the session!
         session[:user_id] = user.id
-        redirect to "/index"
+        redirect to "/"
       else 
         redirect to "/redirect"
       end

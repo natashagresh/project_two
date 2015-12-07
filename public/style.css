@@ -1,0 +1,90 @@
+.title{
+	background-image: url("https://www.thecultivist.com/system/files/042015/553f8d75b3204f6bff000004/background/David_Dawson-Bridgeman-Images-the_painters_feet_2010.jpg?1432805604");
+	height:800px;
+	width:100%;
+	/*opacity: 0.9;*/
+		
+}
+
+.title h1{
+    font-family: 'Pacifico', cursive;
+    margin:0 auto;
+    text-align: center;
+    font-size: 70px;
+    color:black;
+    padding-top: 200px
+
+}
+
+.login h2{
+    font-size:30px;
+    font-family: 'Quicksand';
+    font-weight: bold; 
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    color:black;
+}
+
+.login input{
+	border:2px solid #456879;
+	border-radius:10px;
+	height: 22px;
+	width: 230px;
+	font-family: 'Quicksand';
+	font-size: 20px;
+	opacity: 0.9;
+    filter: alpha(opacity=40);
+}
+
+.login button{
+	font-size: 15px;
+	/*color:black;*/
+	font-family: 'Quicksand'; 
+	/*background:white;
+	border-radius:30%;
+	width:5%;*/
+	   border: solid 4px rgba(196,196,196,0.06);
+   -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+           border-radius: 10px;
+   display: inline-block;
+   color: rgba(0,0,0,1);
+}
+
+.login button:hover{
+	background:grey;
+
+}
+
+.title p{
+	margin:0 auto;
+	padding-top: 40px;
+	font-size:20px;
+	text-align: center;
+	font-family: 'Quicksand'; 
+	font-weight: bold
+	
+}
+
+.index h1{
+	margin:0 auto;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Quicksand'; 
+	font-weight:bold;
+	padding-top:20px;
+    padding-bottom:20px;
+}
+
+.index h2{
+	margin:0 auto;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Quicksand', bold;
+}
+
+
+
+
+
