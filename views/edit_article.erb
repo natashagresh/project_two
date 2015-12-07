@@ -7,6 +7,14 @@
   <input type="text" name="title" placeholder="Article Title" value="<%= @article["title_of_article"] %>">
    <label for="article">Article:</label>
   <textarea name="content">"<%= @article["article"] %>"</textarea>
+  <label for="category_id">Category:</label>
+    <select type="text" name="category_id">
+            <% @categories.each do |category| %>
+
+              <option value="<%=category.id%>"> <%=category.category_name%> <option>
+
+              <% end %>
+  </select>
   <label for="image_url">Image URL:</label>
   <input id="img" type="img" name="img" value="<%= @article["image_url"] %>"></input>
   <input id="submit" type="submit" name="submit"> 

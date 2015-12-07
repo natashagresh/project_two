@@ -1,3 +1,12 @@
+<a href="/index">Homepage</a>
+<a href="/new_articles">Create Article</a>
+<a href="/articles">Articles</a>
+ <form action="/sessions" method="POST">
+ <input type="hidden" name="_method" value="delete">
+    <button>Log Out</button>
+ </form>
+
+
 <h1>Categories</h1>
 
 <% @categories.each do |category| %>
@@ -9,5 +18,9 @@
 
 <%end%>
 
-<p>Go back to <a href="/">Homepage</a></p>
+<!-- <p>Go back to <a href="/index">Homepage</a></p>
+ <form action="/sessions" method="POST">
+ <input type="hidden" name="_method" value="delete">
+    <button>Log Out</button>
+ </form> -->
 

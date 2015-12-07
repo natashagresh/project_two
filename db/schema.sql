@@ -18,15 +18,15 @@ create table posts (
     article VARCHAR, 
     title_of_article VARCHAR, 
     image_url VARCHAR, 
-    author_id integer references users(id)
+    user_id integer references users(id)
    
 );
 
-create table posts_users (
-    id integer primary key, 
-    user_id integer references users(id), 
-    post_id integer references posts(id)
-);
+-- create table posts_users (
+--     id integer primary key, 
+--     user_id integer references users(id), 
+--     post_id integer references posts(id)
+-- );
 
 create table categories (
     id integer primary key, 

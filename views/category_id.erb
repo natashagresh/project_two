@@ -1,8 +1,17 @@
+<a href="/index">Homepage</a>
+<a href="/new_articles">Create Articles</a>
+<a href="/articles">Articles</a>
+ <form action="/sessions" method="POST">
+ <input type="hidden" name="_method" value="delete">
+    <button>Log Out</button>
+ </form>
+
 <h1> <%= @category.category_name %> </h1>
 
 <% @category.posts.each do |post| %>
 	<h2><%= post.title_of_article %> </h2>
 	<p><%= post.article %></p>
+	<img src="<%=post.image_url %>">
 	<%end %> 
 
-	ADD STUFF
+	<!-- ADD STUFF -->

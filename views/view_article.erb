@@ -1,13 +1,18 @@
-<a href="/">Homepage</a>
+<a href="/index">Homepage</a>
 <a href="/categories">Categories</a>
 <a href="/new_articles">New Article</a>
-<a href="/articles/1/edit">Edit Articles</a>
+
 
 <h2><%= @article["title_of_article"] %></h2>
-<h2><%= @article["created_at"] %></h2>
-<h2><%= @article["author_id"] %></h2>
-<h2><%= @article["article"] %></h2>
-<h2><%= @article["image_url"] %></h2>
+
+
+<p><%= @article["article"] %></p>
+<img src="<%= @article["image_url"] %>">
+
+
+<h5>by <%= @article.user.username %>  on <%= @article["created_at"] %><h5> 
+
+<p><a href="/articles/<%= @article["id"] %>/edit">Edit Article</a></p>
 
 
 

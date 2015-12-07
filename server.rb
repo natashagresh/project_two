@@ -11,9 +11,13 @@ module App
     get "/sign_up" do
     	erb :sign_up
     end	
+    
+    get "/index" do
+        erb :index
+    end
 
     get "/" do	
-      erb :index      
+      erb :login      
     end
     
     post "/sessions" do
@@ -42,8 +46,8 @@ module App
       }).try(:authenticate, params[:password])
       if user
       #  Save their ID into the session!
-        session[:username] = user.id
-        redirect to "/"
+        session[:user_id] = user.id
+        redirect to "/index"
       else 
         redirect to "/redirect"
       end
@@ -60,7 +64,6 @@ module App
 
     get "/articles/:id" do
     	@article = Post.find(params[:id])
-    	@category = Category.find(params[:id])
     	erb :view_article
     end	
 
@@ -82,14 +85,13 @@ module App
 
     post "/new_articles" do
     	@article = Post.create({
-    		author: session[:username],
+    		user_id: session[:user_id],
     		created_at: DateTime.now,
     		article: params[:post],
     		title_of_article: params[:title],
     		image_url: params[:img],
-            category_id: params[:category_id]})
+           })
     	category = Category.find(params[:category_id])
-
     	@article.categories.push(category)
     	@article.save
 
@@ -100,20 +102,22 @@ module App
     get "/articles/:id/edit" do
         id = params[:id]
         @article = Post.find_by(id: id)
+        @categories = Category.all
         erb :edit_article
     end    
     
     # Submit updates to an article
-    patch "articles/:id" do
-        @article = Article.find(params['id'])
+    patch "/articles/:id" do
+        @article = Post.find(params['id'])
         @article.update({ 
-        	author: session[:username] ,
+        	user_id: session[:user_id],
         	created_at: DateTime.now, 
         	article: params["post"],
         	title_of_article: params["title"],
-        	image_url: params["img"],
-        	category_id: params[:category_id]})
-        redirect to "articles/#{(article.id)}"
+        	image_url: params["img"]})
+        category = Category.find(params[:category_id])
+        @article.categories.push(category)
+        redirect to "/articles"
     end    
 
     # Delete an article
