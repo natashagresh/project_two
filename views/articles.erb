@@ -1,3 +1,5 @@
+<%if session[:user_id]%>
+
 <a href="/">Homepage</a>
 <a href="/new_articles">Create Article</a>
 <a href="/categories">Categories</a>
@@ -16,6 +18,16 @@
   <a href="/articles/<%=article['id']%>"><img src="<%= article["image_url"]  %>"></li>
 <% end %>
 </ul>
+<%else%>
+
+<h1>Please <a href="/login">Login</a> or <a href="/sign_up">SignUp</a> for access.</h1> 
+
+
+<%end%>
+
+
+
+
 
 
 

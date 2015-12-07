@@ -1,3 +1,5 @@
+<%if session[:user_id]%>
+
 <a href="/">Homepage</a>
 <a href="/articles">Articles</a>
 <a href="/new_articles">Create Articles</a>
@@ -8,12 +10,19 @@
  </form>
 
 <h1> <%= @category.category_name %> </h1>
-
-<% @category.posts.each do |post| %>
-	<h2><%= post.title_of_article %> </h2>
-	<p><%= post.article %></p>
-	<img src="<%=post.image_url %>">
-	<p><%=post.created_at%></p>
+<!-- <h2><%=@category.posts%></h2> -->
+<% @category.posts.each do |article| %>
+	<h2><%= article.title_of_article %> </h2>
+	<p><%= article.article %></p>
+	<img src="<%=article.image_url %>">
+	<p><%=article.created_at%></p>
 	<%end %> 
 
   <!-- how to add name? -->
+
+<%else%>
+
+<h1>Please <a href="/login">Login</a> or <a href="/sign_up">SignUp</a> for access.</h1> 
+
+
+<%end%>

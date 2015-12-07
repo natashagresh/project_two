@@ -8,3 +8,4 @@ CreateCategories.migrate(ARGV[0])
 CreateCategoriesPosts.migrate(ARGV[0])
 CreatePosts.migrate(ARGV[0])
 CreateUsers.migrate(ARGV[0])
+

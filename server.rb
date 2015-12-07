@@ -11,7 +11,7 @@ module App
     end	
 
     get "/" do  
-    @user = User.find(session[:user_id]) if session[:user_id] 
+    @user = User.find(session[:user_id]) if session[:user_id]
       redirect to "/login" if !@user 
       erb :index      
     end
@@ -33,11 +33,6 @@ module App
     	@user = User.create(username: params["name"], password: params["password"], password_confirmation: params["password_confirmation"])
     	redirect to "/"
     end	
-
-    get "/" do	
-      @user = User.find(session[:username])	if session[:username]
-      erb :index      
-    end
 
     post "/" do
     # Try to find user in DB
@@ -74,7 +69,12 @@ module App
 
     get "/categories/:id" do
     	@category = Category.find(params[:id])
-    	@articles = @category.posts
+        @category.posts
+        @article = Post.all
+     #    @category = Category.all
+    	# @articles = @category.posts
+        # @all_posts = Post.all
+        # @posts = @all_posts.categories_posts.where(category_id: params[:id])
     	erb :category_id
     end	
 
@@ -116,14 +116,18 @@ module App
         	title_of_article: params["title"],
         	image_url: params["img"]})
         category = Category.find(params[:category_id])
+        categoryid = article.categories.where(id: params[:category_id])
+        if !categoryid.exists?
+
         @article.categories.push(category)
+    end
         redirect to "/articles"
     end    
 
     # Delete an article
     delete "/articles/:id" do
         id = params['id']
-        @article = Article.find_by({id: id})
+        @article = Post.find_by({id: id})
         @article.destroy
         redirect to "/articles"
     end

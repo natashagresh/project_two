@@ -1,3 +1,6 @@
+<%if session[:user_id]%>
+
+
 <h1>Editing <%= @article["title"] %>:</h1>
 
 <form action="/articles/<%= @article["id"] %>" method="POST">
@@ -6,7 +9,7 @@
   <label for="article_title">Article Title:</label>
   <input type="text" name="title" placeholder="Article Title" value="<%= @article["title_of_article"] %>">
    <label for="article">Article:</label>
-  <textarea name="content">"<%= @article["article"] %>"</textarea>
+  <textarea value="<%= @article["article"]%>" name="content">"<%= @article["article"] %>"</textarea>
   <label for="category_id">Category:</label>
     <select type="text" name="category_id">
             <% @categories.each do |category| %>
@@ -21,7 +24,14 @@
  
 </form>
 
-<form action="/articles/<%= @article["id"] %>">
+<form method ="POST" action="/articles/<%= @article["id"] %>">
   <input type="hidden" name="_method" value="delete">
   <button>Delete Article</button>
 </form>
+
+<%else%>
+
+<h1>Please <a href="/login">Login</a> or <a href="/sign_up">SignUp</a> for access.</h1> 
+
+
+<%end%>
