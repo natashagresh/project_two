@@ -1,4 +1,4 @@
-require_relative "../config"
+require_relative "../db_config"
 
 class CreateCategories < ActiveRecord::Migration
 	def up
@@ -13,5 +13,6 @@ class CreateCategories < ActiveRecord::Migration
 		drop_table :categories
 	end
 end	
+
 
 

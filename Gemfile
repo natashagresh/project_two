@@ -5,6 +5,7 @@ gem "activerecord"
 gem "sinatra"
 gem "bcrypt"
 gem "redcarpet"
+gem "rails"
 
 group :development do
 	gem "sqlite3"
@@ -14,4 +15,4 @@ group :production do
 	gem "pg"
 end	
 
-# gem "rails"
+
