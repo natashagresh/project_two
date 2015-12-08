@@ -3,10 +3,8 @@
 # our sqlite3 database
 
 require_relative "db_config.rb"
-# CategoriesPost.delete_all
 Category.delete_all
 Post.delete_all
-# PostsUser.delete_all
 User.delete_all
 
 # Using our models to seed our database!
