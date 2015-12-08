@@ -218,6 +218,99 @@
 	font-size: 24px
 }
 
+.view_articles{
+   font-family: 'Quicksand', bold;
+   margin:0 auto;
+   text-align:center;
+}
+
+.view_articles h2{
+	padding-top: 30px;
+    font-size: 32px;
+}
+
+.view_article p {
+	font-size: 28px;
+}
+
+.new_form{
+   font-family: 'Quicksand', bold;
+   margin:0 auto;
+   text-align:center;
+   padding-top: 10px;
+   background-image: url("http://petitepassport.com/dev/wordpress/wp-content/uploads/2014/11/jeffkoonscentrepompidou.jpg");
+   height:700px;
+   width:100%;
+   background-position:center;
+   background-repeat: no-repeat;
+}
+
+.new_form h1{
+	padding-top: 20px;
+	font-size: 30px;
+
+}
+
+.new_form input{
+    font-family: 'Quicksand', bold;
+    border:1px solid;
+    font-color:black;
+    width: 150px;
+    margin:0 auto;
+    background-color: rgba(249,249,249,0)
+
+}
+
+
+.new_form label{
+	margin:0 auto;
+    text-align:center;
+}
+
+.skinny_div{
+	width:50%;
+    margin:0 auto;
+    text-align:center;
+}
+
+.clear {
+	background-color: rgba(249,249,249,0);
+	border-radius: 10px;
+}
+
+.categories{
+   font-family: 'Quicksand', bold;
+   margin:0 auto;
+   text-align:center;
+}
+
+.categories h1{
+	font-size:50px;
+}
+
+.categories ul{
+   list-style-type: none;
+   margin:0 auto;
+   text-align:center;
+   font-size:22px;
+   padding-top: 10px;
+
+}
+
+.categories li{
+	padding-bottom: 10px;
+}
+
+.categories_img{
+	padding-top:10px;
+	background-image: url("http://i.imgur.com/CXkqTwb.jpg?1");
+	width:100%;
+	height:800px;
+	background-position:center;
+    background-repeat: no-repeat;
+}
+
+
 
 
 

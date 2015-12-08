@@ -1,8 +1,14 @@
 <%if session[:user_id]%>
 
-<a href="/">Homepage</a>
-<a href="/categories">Categories</a>
-<a href="/articles">Articles</a>
+<div class="articles_top">
+  <ul>
+   <li><a href="/">Homepage</a></li>
+   <li><a href="/categories">Categories</a></li>
+   <li><a href="/articles">Articles</a></li>
+ </ul>
+</div>
+
+<div class="new_form">
  <form action="/sessions" method="POST">
  <input type="hidden" name="_method" value="delete">
     <button>Log Out</button>
@@ -10,12 +16,13 @@
 
 
 <h1>Upload New Article Here</h1>
-
+<div class="skinny_div">
 <form method="POST" action="/new_articles">
 <label for="article_title">Article Title:</label>
  <input name="title" type="text" placeholder="Title"></input>
  <label for="article">Article: </label>
- <textarea name="article" cols="100" rows="20" placeholder="Write Article Here..."></textarea>
+ <textarea class="clear" name="article" cols="100" rows="20" placeholder="Write Article Here..."></textarea>
+ <label for="categories">Categories :</label>
   <select type="text" name="category_id">
             <% @categories.each do |category| %>
 
@@ -24,11 +31,12 @@
               <% end %>
   </select>
 	
-
+<label for="img_url">Image URL: </label>
  <input name="img" type="img" placeholder="Add Image Here"></input>
  <input type="submit" value="Sumbit Article"></input>
 </form>
-
+</div>
+</div>
 <%else%>
 
 <div class="redirect">

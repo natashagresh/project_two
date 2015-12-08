@@ -1,8 +1,13 @@
 <%if session[:user_id]%>
 
-<a href="/">Homepage</a>
-<a href="/new_articles">Create Article</a>
-<a href="/articles">Articles</a>
+<div class="articles_top">
+  <ul>
+     <li><a href="/">Homepage</a></li>
+     <li><a href="/new_articles">Create Article</a></li>
+     <li><a href="/articles">Articles</a></li>
+  </ul> 
+</div>
+<div class="categories"    
  <form action="/sessions" method="POST">
  <input type="hidden" name="_method" value="delete">
     <button>Log Out</button>
@@ -15,8 +20,11 @@
 
 <ul>
 <li><a href="/categories/<%=category['id']%>"><%=category["category_name"]%></a></li>
-<%end%>
 </ul>
+<%end%>
+</div>
+<div class="categories_img">
+</div>
 <%else%>
 
 <div class="redirect">
