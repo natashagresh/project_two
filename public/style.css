@@ -1,9 +1,3 @@
-.title{
-	/*background-image: url("https://www.thecultivist.com/system/files/042015/553f8d75b3204f6bff000004/background/David_Dawson-Bridgeman-Images-the_painters_feet_2010.jpg?1432805604");*/
-	
-	/*background-color:rgba(255,255,255,0.5)*/
-
-}
 
 .background_image{	
 	background-image: url("https://www.thecultivist.com/system/files/042015/553f8d75b3204f6bff000004/background/David_Dawson-Bridgeman-Images-the_painters_feet_2010.jpg?1432805604");
@@ -12,10 +6,7 @@
 	background-attachment: fixed;
 }
 
-
-
 .title h1{
-    /*font-family: 'Pacifico', cursive;*/
     font-family: 'Quicksand';
     margin:0 auto;
     text-align: center;
@@ -26,7 +17,6 @@
 }
 
 .title h2{
-    /*font-family: 'Pacifico', cursive;*/
     font-family: 'Quicksand';
     margin:0 auto;
     text-align: center;
@@ -35,7 +25,6 @@
     padding-top: 50px
 
 }
-
 
 .login h2{
     font-size:30px;
@@ -48,9 +37,7 @@
 }
 
 .login input{
-	/*border:2px solid #456879;*/
 	border:1px solid;
-	/*border-radius:10px;*/
 	height: 22px;
 	width: 230px;
 	font-family: 'Quicksand';
@@ -62,12 +49,6 @@
 .login button{
 	font-size: 15px;
 	font-family: 'Quicksand'; 
-	/*border: solid 4px rgba(196,196,196,0.06);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    display: inline-block;
-    color: rgba(0,0,0,1);*/
     border:1px solid;
 }
 
@@ -82,8 +63,7 @@
 	font-size:20px;
 	text-align: center;
 	font-family: 'Quicksand'; 
-	font-weight: bold
-	
+	font-weight: bold	
 }
 
 .index_image{
@@ -92,7 +72,6 @@
 	height:800px;
 	background-repeat: no-repeat;
 	text-align: center;
-	/*padding-top: 20px;*/
 }
 
 .index h1{
@@ -101,8 +80,6 @@
 	font-size: 40px;
 	font-family: 'Quicksand'; 
 	font-weight:bold;
-	/*padding-top:10px;*/
-    /*padding-bottom:20px;*/
 }
 
 .index h2{
@@ -110,7 +87,6 @@
 	text-align: center;
 	font-size: 40px;
 	font-family: 'Quicksand', bold;
-	/*padding-top: 40px;*/
 }
 
 .index li{
@@ -135,12 +111,6 @@
 	margin:0 auto;
 	text-align:center;
 }
-
-/*.sign_up h1{
-	font-family: 'Quicksand', bold;
-	margin:0 auto;
-	text-align:center;
-}*/
 
 .sign_up input{
     font-family: 'Quicksand', bold;
@@ -174,8 +144,6 @@
 }
 
 .redirect_writing{
-	/*opacity:0.9;
-	background-color: rgba(255,255,255,0.5);*/
 	color:white;
 	font-family: 'Quicksand', bold;
 	height:100px;
@@ -257,7 +225,7 @@
     font-color:black;
     width: 150px;
     margin:0 auto;
-    background-color: rgba(249,249,249,0)
+    background-color: rgba(249,249,249,0);
 
 }
 
@@ -267,10 +235,16 @@
     text-align:center;
 }
 
+.new_form textarea{
+	font-size:11px;
+}
+
 .skinny_div{
 	width:50%;
     margin:0 auto;
     text-align:center;
+    font-size: 10px;
+    font-family: 'Quicksand', bold;
 }
 
 .clear {
@@ -309,6 +283,78 @@
 	background-position:center;
     background-repeat: no-repeat;
 }
+
+.category_id{
+   font-family: 'Quicksand', bold;
+   margin:0 auto;
+   text-align:center;
+}
+
+.category_id h1{
+   	padding-top:15px;
+	padding-bottom: 15px;
+	font-size:40px;
+}
+
+.category_id h2{
+   	padding-top:20px;
+	padding-bottom: 20px;
+}
+
+.category_id p{
+	padding-top:15px;
+	padding-bottom: 25px;
+}
+
+.edit{
+   font-family: 'Quicksand', bold;
+   margin:0 auto;
+   text-align:center;
+   padding-top:15px;
+}
+
+.edit h1{
+	font-size: 44px;
+}
+
+.edit input{
+	font-family: 'Quicksand', bold;
+    border:1px solid;
+    color:black;
+    width: 230px;
+}
+
+.edit textarea{
+	font-size:12px;
+}
+
+.edit button{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border:1px solid;
+	font-size: 15px;
+	font-family: 'Quicksand'; 
+	text-align: center;
+}
+
+.title_of_article{
+    font-family: 'Quicksand', bold;
+    margin:0 auto;
+    text-align: center;
+    padding-bottom:10px;
+}
+
+.edit_image{
+   background-image: url("http://i.imgur.com/6gRI2z5.jpg?2");
+   height:400px;
+   width: 100%;
+   background-position:center;
+   background-repeat: no-repeat;
+   padding-top: 20px;
+   padding-bottom: 20px;
+
+}
+
 
 
 

@@ -35,6 +35,6 @@ I will be working on an internally facing Wiki Application for "company unknown"
 
 
 ###**ERD**###
-![ERD](http://i.imgur.com/W6me4VP.png)
+![ERD](http://i.imgur.com/lBgk7hm.png)
 
 

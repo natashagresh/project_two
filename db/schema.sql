@@ -13,20 +13,13 @@ create table users (
 
 create table posts (
     id integer primary key, 
-    created_at DATETIME,
-    -- updated_at DATETIME, 
+    created_at DATETIME, 
     article VARCHAR, 
     title_of_article VARCHAR, 
     image_url VARCHAR, 
     user_id integer references users(id)
    
 );
-
--- create table posts_users (
---     id integer primary key, 
---     user_id integer references users(id), 
---     post_id integer references posts(id)
--- );
 
 create table categories (
     id integer primary key, 

@@ -1,16 +1,31 @@
 <%if session[:user_id]%>
 
-
+<div class="articles_top">
+  <ul>
+     <li><a href="/">Homepage</a></li>
+     <li><a href="/new_articles">Create Article</a></li>
+     <li><a href="/articles">Articles</a></li>
+  </ul> 
+</div>
+<div class="edit_image">
+</div>
+<div class="edit">
 <h1>Editing <%= @article["title"] %>:</h1>
 
 <form action="/articles/<%= @article["id"] %>" method="POST">
 
   <input type="hidden" name="_method" value="patch">
+  <div class="title_of_article">
   <label for="article_title">Article Title:</label>
   <input type="text" name="title" placeholder="Article Title" value="<%= @article["title_of_article"] %>">
-
+  </div>
+  
+  <div class="title_of_article">
   <label for="article">Article:</label>
-  <textarea value="<%= @article["article"]%>" name="article"> <%= @article["article"] %></textarea>
+  </div>
+  <div class="title_of_article">
+  <textarea value="<%= @article["article"]%>" cols="100" rows="20" name="article"> <%= @article["article"] %></textarea>
+  </div>
   <label for="category_id">Category:</label>
     <select type="text" name="category_id">
             <% @categories.each do |category| %>
@@ -29,6 +44,8 @@
   <input type="hidden" name="_method" value="delete">
   <button>Delete Article</button>
 </form>
+</div>
+
 
 <%else%>
 <div class="redirect">

@@ -17,11 +17,13 @@
 
 <h1>Upload New Article Here</h1>
 <div class="skinny_div">
+
 <form method="POST" action="/new_articles">
+<div class="title_of_article">
 <label for="article_title">Article Title:</label>
  <input name="title" type="text" placeholder="Title"></input>
  <label for="article">Article: </label>
- <textarea class="clear" name="article" cols="100" rows="20" placeholder="Write Article Here..."></textarea>
+ <textarea class="clear" name="article" cols="100" rows="20"placeholder="Write Article Here..."></textarea>
  <label for="categories">Categories :</label>
   <select type="text" name="category_id">
             <% @categories.each do |category| %>
@@ -47,7 +49,7 @@
 
 
 <%end%>
-<!-- add stuff here -->
+
 
 
 
