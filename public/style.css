@@ -86,14 +86,23 @@
 	
 }
 
+.index_image{
+	background-image: url("http://i.imgur.com/wKnxsWQ.jpg?2");
+	background-position: center;
+	height:800px;
+	background-repeat: no-repeat;
+	text-align: center;
+	/*padding-top: 20px;*/
+}
+
 .index h1{
 	margin:0 auto;
 	text-align: center;
 	font-size: 40px;
 	font-family: 'Quicksand'; 
 	font-weight:bold;
-	padding-top:20px;
-    padding-bottom:20px;
+	/*padding-top:10px;*/
+    /*padding-bottom:20px;*/
 }
 
 .index h2{
@@ -101,6 +110,24 @@
 	text-align: center;
 	font-size: 40px;
 	font-family: 'Quicksand', bold;
+	/*padding-top: 40px;*/
+}
+
+.index li{
+	list-style-type: none;
+	display:inline;
+	font-family: 'Quicksand', bold;
+	padding-right: 140px;
+	padding-left: 130px;
+	font-size: 24px
+}
+
+.index button{
+	border:1px solid;
+	font-size: 15px;
+	font-family: 'Quicksand'; 
+	margin:0 auto;
+	text-align: center;
 }
 
 .sign_up{
@@ -135,13 +162,64 @@
 }
 
 .redirect{
-	background-image:url("http://images.adsttc.com/media/images/5542/86df/e58e/ce70/6c00/0405/large_jpg/RICHARD_SERRA_EAST_WEST_WEST_EAST_QATAR_201014_124_(2).jpg?1430423256");
+	background-image:url("http://i.imgur.com/xRyBNO3.jpg?1");
 	color:white;
-	height:800px;
+	height:700px;
 	width:100%;
 	background-position:center;
 	font-family: 'Quicksand', bold;
+	margin:0 auto;
+	text-align:center;
+    background-repeat: no-repeat;
 }
+
+.redirect_writing{
+	/*opacity:0.9;
+	background-color: rgba(255,255,255,0.5);*/
+	color:white;
+	font-family: 'Quicksand', bold;
+	height:100px;
+	width:30%;
+	text-align:center;
+	margin:0 auto;
+	padding-left:400px;
+	padding-top: 150px;
+}
+
+.articles{
+	font-family: 'Quicksand', bold;
+	text-align:center;
+	margin:0 auto;
+	
+}
+
+.articles h1{
+	font-size: 40px;
+	padding-top: 30px;
+}
+
+.articles li{
+	list-style-type: none;
+	font-size:32px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.articles li a{
+	padding bottom:5px;
+}
+
+.articles_top li{
+	list-style-type: none;
+	display:inline;
+	font-family: 'Quicksand', bold;
+	padding-right: 120px;
+	padding-left: 129px;
+	font-size: 24px
+}
+
+
+
 
 
 

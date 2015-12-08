@@ -1,8 +1,12 @@
 <%if session[:user_id]%>
-
-<a href="/">Homepage</a>
-<a href="/new_articles">Create Article</a>
-<a href="/categories">Categories</a>
+<div class="articles_top">
+<ul>
+<li><a href="/">Homepage</a></li>
+<li><a href="/new_articles">Create Article</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</div>
+<div class="articles">
  <form action="/sessions" method="POST">
  <input type="hidden" name="_method" value="delete">
     <button>Log Out</button>
@@ -15,15 +19,18 @@
 <% @articles.each do |article| %>
   <li>
   <%= article["title_of_article"]  %></li>
-  <a href="/articles/<%=article['id']%>"><img src="<%= article["image_url"]  %>"></li>
+  <a href="/articles/<%=article['id']%>"><img src="<%= article["image_url"]  %>"></li></a>
 <% end %>
 </ul>
 <%else%>
 
+<div class="redirect">
+<div class="redirect_writing">
 <h1>Please <a href="/login">Login</a> or <a href="/sign_up">SignUp</a> for access.</h1> 
 
 
 <%end%>
+</div>
 
 
 

@@ -8,8 +8,9 @@
   <input type="hidden" name="_method" value="patch">
   <label for="article_title">Article Title:</label>
   <input type="text" name="title" placeholder="Article Title" value="<%= @article["title_of_article"] %>">
-   <label for="article">Article:</label>
-  <textarea value="<%= @article["article"]%>" name="content">"<%= @article["article"] %>"</textarea>
+
+  <label for="article">Article:</label>
+  <textarea value="<%= @article["article"]%>" name="article"> <%= @article["article"] %></textarea>
   <label for="category_id">Category:</label>
     <select type="text" name="category_id">
             <% @categories.each do |category| %>
@@ -30,8 +31,9 @@
 </form>
 
 <%else%>
-
+<div class="redirect">
+<div class="redirect_writing">
 <h1>Please <a href="/login">Login</a> or <a href="/sign_up">SignUp</a> for access.</h1> 
-
+</div>
 
 <%end%>

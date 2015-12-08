@@ -4,7 +4,7 @@ module App
     set :method_override, true
     enable :sessions
 
-    $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true)
 
     get "/sign_up" do
     	erb :sign_up
@@ -87,7 +87,7 @@ module App
     	@article = Post.create({
     		user_id: session[:user_id],
     		created_at: DateTime.now,
-    		article: params[:post],
+    		article: params[:article],
     		title_of_article: params[:title],
     		image_url: params[:img],
            })
@@ -108,15 +108,15 @@ module App
     
     # Submit updates to an article
     patch "/articles/:id" do
-        @article = Post.find(params['id'])
+        @article = Post.find(params[:id])
         @article.update({ 
         	user_id: session[:user_id],
         	created_at: DateTime.now, 
-        	article: params["post"],
+        	article: params[:article],
         	title_of_article: params["title"],
         	image_url: params["img"]})
         category = Category.find(params[:category_id])
-        categoryid = article.categories.where(id: params[:category_id])
+        categoryid = @article.categories.where(id: params[:category_id])
         if !categoryid.exists?
 
         @article.categories.push(category)
