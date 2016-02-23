@@ -190,7 +190,7 @@
 }
 
 .articles ul{
-  padding:0;
+  padding:40px;
 }
 
 .articles h1{
@@ -215,6 +215,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 24px;
+  padding-bottom: 50px;
 }
 
 .articles_top a{
