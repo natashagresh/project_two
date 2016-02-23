@@ -1,9 +1,24 @@
+* {
+  margin: 0;
+}
 
 .background_image{	
-	background-image: url("https://www.thecultivist.com/system/files/042015/553f8d75b3204f6bff000004/background/David_Dawson-Bridgeman-Images-the_painters_feet_2010.jpg?1432805604");
-    height:700px;
-	width:100%;
+	/*background-image: url("https://www.thecultivist.com/system/files/042015/553f8d75b3204f6bff000004/background/David_Dawson-Bridgeman-Images-the_painters_feet_2010.jpg?1432805604");*/
+  background-image: url('/images/login_photo.jpg');
+  height:700px;
 	background-attachment: fixed;
+  background-position: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+   overflow-y: scroll;
+   vertical-align: baseline;
 }
 
 .title h1{
@@ -16,14 +31,8 @@
 
 }
 
-.title h2{
-    font-family: 'Quicksand';
-    margin:0 auto;
-    text-align: center;
-    font-size: 70px;
-    color:white;
-    padding-top: 50px
-
+.login{
+ overflow-y: scroll;
 }
 
 .login h2{
@@ -43,13 +52,13 @@
 	font-family: 'Quicksand';
 	font-size: 20px;
 	opacity: 0.9;
-    filter: alpha(opacity=40);
+  filter: alpha(opacity=40);
 }
 
 .login button{
 	font-size: 15px;
 	font-family: 'Quicksand'; 
-    border:1px solid;
+  border:1px solid;
 }
 
 .login button:hover{
@@ -67,7 +76,8 @@
 }
 
 .index_image{
-	background-image: url("http://i.imgur.com/wKnxsWQ.jpg?2");
+/*	background-image: url("http://i.imgur.com/wKnxsWQ.jpg?2");*/
+  background-image: url("/images/homepage.jpg");
 	background-position: center;
 	height:800px;
 	background-repeat: no-repeat;
@@ -80,6 +90,7 @@
 	font-size: 40px;
 	font-family: 'Quicksand'; 
 	font-weight:bold;
+  padding-top: 40px;
 }
 
 .index h2{
@@ -89,13 +100,22 @@
 	font-family: 'Quicksand', bold;
 }
 
+.index ul{
+  padding: 20px;
+  /*padding-top: 20px;*/
+    display: flex;
+    justify-content: space-between;
+/*  flex-wrap: wrap;*/
+}
+
 .index li{
-	list-style-type: none;
-	display:inline;
+/*	list-style-type: none;*/
+  padding:0px;
+  list-style:none;
 	font-family: 'Quicksand', bold;
-	padding-right: 140px;
-	padding-left: 130px;
-	font-size: 24px
+/*	padding-right: 140px;
+	padding-left: 130px;*/
+	font-size: 24px;
 }
 
 .index button{
@@ -104,6 +124,10 @@
 	font-family: 'Quicksand'; 
 	margin:0 auto;
 	text-align: center;
+}
+
+.index a{
+  text-decoration: none;
 }
 
 .sign_up{
@@ -125,14 +149,16 @@
 }
 
 .signup_image{
-    background-image:url("http://i.imgur.com/hALtqfi.jpg?1");
+    /*background-image:url("http://i.imgur.com/hALtqfi.jpg?1");*/
+    background-image:url("/images/signup.jpg");
     background-position:center;
     height:800px;
 	width:100%;
 }
 
 .redirect{
-	background-image:url("http://i.imgur.com/xRyBNO3.jpg?1");
+	/*background-image:url("http://i.imgur.com/xRyBNO3.jpg?1");*/
+  background-image: url('/images/wrongpassword.jpg');
 	color:white;
 	height:700px;
 	width:100%;
@@ -140,7 +166,9 @@
 	font-family: 'Quicksand', bold;
 	margin:0 auto;
 	text-align:center;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
 }
 
 .redirect_writing{
@@ -161,6 +189,10 @@
 	
 }
 
+.articles ul{
+  padding:0;
+}
+
 .articles h1{
 	font-size: 40px;
 	padding-top: 30px;
@@ -173,17 +205,37 @@
 	padding-bottom: 30px;
 }
 
+
 .articles li a{
 	padding bottom:5px;
 }
 
+.articles_top ul{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.articles_top a{
+  text-decoration: none;
+}
+
 .articles_top li{
-	list-style-type: none;
-	display:inline;
-	font-family: 'Quicksand', bold;
-	padding-right: 120px;
-	padding-left: 129px;
 	font-size: 24px
+  padding:0px;
+  list-style:none;
+  font-family: 'Quicksand', bold;
+}
+
+.articles_top ul{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.articles button{
+  margin-top: 20px;
 }
 
 .view_articles{
@@ -201,12 +253,18 @@
 	font-size: 28px;
 }
 
+.new_form button{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
 .new_form{
    font-family: 'Quicksand', bold;
    margin:0 auto;
    text-align:center;
    padding-top: 10px;
-   background-image: url("http://petitepassport.com/dev/wordpress/wp-content/uploads/2014/11/jeffkoonscentrepompidou.jpg");
+/*   background-image: url("http://petitepassport.com/dev/wordpress/wp-content/uploads/2014/11/jeffkoonscentrepompidou.jpg");*/
+   background-image: url("/images/image4.jpg");
    height:700px;
    width:100%;
    background-position:center;
@@ -226,9 +284,7 @@
     width: 150px;
     margin:0 auto;
     background-color: rgba(249,249,249,0);
-
 }
-
 
 .new_form label{
 	margin:0 auto;
@@ -260,6 +316,15 @@
 
 .categories h1{
 	font-size:50px;
+/*  padding-top: 30px;*/
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.categories button{
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100px;
 }
 
 .categories ul{
@@ -268,16 +333,22 @@
    text-align:center;
    font-size:22px;
    padding-top: 10px;
+    display: inline;
+    justify-content: space-between;
 
 }
 
 .categories li{
 	padding-bottom: 10px;
+  text-align: center;
+  list-style: none;
+  padding: 0px;
 }
 
 .categories_img{
 	padding-top:10px;
-	background-image: url("http://i.imgur.com/CXkqTwb.jpg?1");
+	/*background-image: url("http://i.imgur.com/CXkqTwb.jpg?1");*/
+  background-image: url("/images/image6.jpg");
 	width:100%;
 	height:800px;
 	background-position:center;
@@ -345,14 +416,14 @@
 }
 
 .edit_image{
-   background-image: url("http://i.imgur.com/6gRI2z5.jpg?2");
+  /* background-image: url("http://i.imgur.com/6gRI2z5.jpg?2");*/
+    background-image: url("/images/image5.jpg");
    height:400px;
    width: 100%;
    background-position:center;
    background-repeat: no-repeat;
    padding-top: 20px;
    padding-bottom: 20px;
-
 }
 
 
